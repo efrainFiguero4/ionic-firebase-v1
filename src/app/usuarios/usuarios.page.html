@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item color="none" *ngFor="let usuario of usuarios">
+      <ion-icon name="person" item-left></ion-icon>
+      <b>Nombres: </b>{{usuario.nombre}}
+      <br>
+      <b>Apellidos: </b>{{usuario.apellidos}}
+      <ion-badge item-end (click)="go_eliminarusuario(usuario)" style="color: red; cursor: pointer;">eliminar</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
